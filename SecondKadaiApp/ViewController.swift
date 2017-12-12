@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
         let resultViewcontroller:ResultViewController =
         segue.destination as! ResultViewController
         
-        resultViewcontroller.name = "片岡"
+        resultViewcontroller.name = textfield.text!
     }
     
     
